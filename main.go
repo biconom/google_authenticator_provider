@@ -45,7 +45,7 @@ func GenerateSecret() string {
 	}
 	return string(b)
 }
-func ComputeCode(secret string) string {
+func ComputePassword(secret string) string {
 	var key, err = base32.StdEncoding.DecodeString(secret)
 	if err != nil {
 		return ""
